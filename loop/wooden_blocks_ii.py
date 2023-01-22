@@ -1,7 +1,6 @@
 blocks = int(input("Enter the number of blocks: "))
 
 height = 0
-used_blocks = 0
 remaining_blocks = 0
 
 if blocks >= 1:
