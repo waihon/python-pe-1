@@ -1,6 +1,14 @@
 def liters_100km_to_miles_gallon(liters):
-    meters_per_mile = 1609.344
+    meters_per_mile = 1_609.344
+    km_per_mile = meters_per_mile / 1_000
     liters_per_gallon = 3.785411784
+    
+    liters_per_km = liters / 100 # km
+    km_per_liter = 1 / liters_per_km
+    miles_per_liter = km_per_liter / km_per_mile
+    miles_per_gallon = miles_per_liter * liters_per_gallon
+    
+    return miles_per_gallon
 
 def miles_gallon_to_liters_100km(miles):
     meters_per_mile = 1609.344
