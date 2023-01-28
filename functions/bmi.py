@@ -10,7 +10,7 @@ def bmi(weight, height):
 def lb_to_kg(lb):
     return lb * 0.45359237
     
-def ft_and_inch_to_m(ft, inch):
+def ft_and_inch_to_m(ft, inch = 0.0):
     return ft * 0.3048 + inch * 0.0254 # (2.54 cm)
 
 if __name__ == "__main__":
@@ -19,3 +19,4 @@ if __name__ == "__main__":
     print(lb_to_kg(100))    # 45.359237
     print(ft_and_inch_to_m(5, 7)) # 1.7018
     print(ft_and_inch_to_m(6, 0)) # 1.8288000000000002
+    print(ft_and_inch_to_m(6))    # 1.8288000000000002
