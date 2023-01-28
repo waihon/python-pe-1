@@ -20,3 +20,4 @@ if __name__ == "__main__":
     print(ft_and_inch_to_m(5, 7)) # 1.7018
     print(ft_and_inch_to_m(6, 0)) # 1.8288000000000002
     print(ft_and_inch_to_m(6))    # 1.8288000000000002
+    print(bmi(lb_to_kg(176), ft_and_inch_to_m(5, 7))) # 27.565214082533313
