@@ -7,6 +7,10 @@ def bmi(weight, height):
 
     return weight / height ** 2
 
+def lb_to_kg(lb):
+    return lb * 0.45359237
+
 if __name__ == "__main__":
     print(bmi(70.0, 1.58))  # 28.040378144528116
     print(bmi(641.0, 1.65)) # None
+    print(lb_to_kg(100))    # 45.359237
