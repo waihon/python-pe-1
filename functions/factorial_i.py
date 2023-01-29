@@ -14,7 +14,7 @@ if __name__ == "__main__":
     for n in range(-1, 6):
         print(n, factorial(n))
     """
-    -1 0
+    -1 None
     0 1
     1 1
     2 2
