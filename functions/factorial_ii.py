@@ -5,7 +5,7 @@ def factorial(n):
     #    = (n-1)! x n
     if n < 0:
         return None
-    if n < 2:
+    if n < 2: # the base case (termination condition)
         return 1
 
     return factorial(n-1) * n
