@@ -15,12 +15,13 @@ while True:
         school_class[name] = (score,)
         
 for name in sorted(school_class.keys()):
-    adding = 0
+    sum = 0
     counter = 0
     for score in school_class[name]:
-        adding += score
+        sum += score
         counter += 1
-    print(name, ":", adding / counter)
+    average = sum / counter
+    print(name, ":", average)
 
 """
 Enter the student's name: Joe
