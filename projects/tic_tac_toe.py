@@ -150,7 +150,22 @@ o implement the functions defined for you in the editor.
 def display_board(board):
     # The function accepts one parameter containing the board's current status
     # and prints it out to the console.
-    pass
+    print(f"""
++-------+-------+-------+
+|       |       |       |
+|   {board[0][0]}   |   {board[0][1]}   |   {board[0][2]}   |
+|       |       |       |
++-------+-------+-------+
+|       |       |       |
+|   {board[1][0]}   |   {board[1][1]}   |   {board[1][2]}   |
+|       |       |       |
++-------+-------+-------+
+|       |       |       |
+|   {board[2][0]}   |   {board[2][1]}   |   {board[2][2]}   |
+|       |       |       |
++-------+-------+-------+
+"""
+    )
 
 
 def enter_move(board):
@@ -176,3 +191,9 @@ def victory_for(board, sign):
 def draw_move(board):
     # The function draws the computer's move and updates the board.
     pass
+
+board = [[1, 2,   3],
+         [4, 'X', 6],
+         [7, 8,   9]]
+
+display_board(board)
