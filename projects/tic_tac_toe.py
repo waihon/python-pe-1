@@ -233,24 +233,33 @@ def draw_move(board):
     # The function draws the computer's move and updates the board.
     from random import choice
     free_fields = make_list_of_free_fields(board)
-    free_field = choice(free_fields)
-    row = free_field[0]
-    col = free_field[1]
-    board[row][col] = 'X'
-    
-
-# Computer plays first and always puts X in the middle
-board = [[1, 2,   3],
-         [4, 'X', 6],
-         [7, 8,   9]]
+    if len(free_fields) == 9:
+        # Nothing occupied yet, so occupy the center
+        board[1][1] = 'X'
+    else:
+        # The initial version of computer's moves doesn't implement any AI,
+        # just a random choice of occupied squares.
+        row, col = choice(free_fields)
+        board[row][col] = 'X'
+      
 
 if __name__ == "__main__":
+    # Computer plays first and always puts X in the middle
+    board = [[1, 2, 3],
+             [4, 5, 6],
+             [7, 8, 9]]
     display_board(board)
+
+    draw_move(board)
+    display_board(board)
+
     enter_move(board)
     display_board(board)
+
     free_fields = make_list_of_free_fields(board)
     print(len(free_fields))
     print(free_fields)
+
     draw_move(board)
     display_board(board)
 
