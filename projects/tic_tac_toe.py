@@ -200,7 +200,13 @@ def make_list_of_free_fields(board):
     # The function browses the board and builds a list of all the free squares; 
     # the list consists of tuples, while each tuple is a pair of row and column
     # numbers.
-    pass
+    result = []
+    for row in range(3):
+        for col in range(3):
+            if board[row][col] in range(1, 10):
+                result.append((row, col))
+
+    return result
 
 
 def victory_for(board, sign):
@@ -218,6 +224,8 @@ board = [[1, 2,   3],
          [4, 'X', 6],
          [7, 8,   9]]
 
-display_board(board)
-enter_move(board)
-display_board(board)
+if __name__ == "__main__":
+    display_board(board)
+    enter_move(board)
+    display_board(board)
+    print(make_list_of_free_fields(board))
