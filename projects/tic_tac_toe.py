@@ -172,8 +172,29 @@ def enter_move(board):
     # The function accepts the board's current status, asks the user about their
     # move, checks the input, and updates the board according to the user's
     # decision.
-    pass
+    move_to_indexes = {1: (0, 0), 2: (0, 1), 3: (0, 2),
+                       4: (1, 0), 5: (1, 1), 6: (1, 2),
+                       7: (2, 0), 8: (2, 1), 9: (2, 2)}
+    while True:
+        try:
+            move = int(input("Enter your move (1-9): "))
+            if move not in range(1, 10):
+                print("Invalid move! Please try again.")
+                continue
 
+            row = move_to_indexes[move][0]
+            col = move_to_indexes[move][1]
+            square_val = board[row][col]
+            if square_val not in range(1, 10):
+                print("That's already occupied! Please try again.")
+                continue
+
+            # That's not occupied yet, so update it with what user plays
+            board[row][col] = 'O'
+            break
+        except:
+            print("A possible move is between 1 and 9.")
+        
 
 def make_list_of_free_fields(board):
     # The function browses the board and builds a list of all the free squares; 
@@ -192,8 +213,11 @@ def draw_move(board):
     # The function draws the computer's move and updates the board.
     pass
 
+# Computer plays first and always puts X in the middle
 board = [[1, 2,   3],
          [4, 'X', 6],
          [7, 8,   9]]
 
+display_board(board)
+enter_move(board)
 display_board(board)
