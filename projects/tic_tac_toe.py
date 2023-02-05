@@ -217,7 +217,13 @@ def victory_for(board, sign):
 
 def draw_move(board):
     # The function draws the computer's move and updates the board.
-    pass
+    from random import choice
+    free_fields = make_list_of_free_fields(board)
+    free_field = choice(free_fields)
+    row = free_field[0]
+    col = free_field[1]
+    board[row][col] = 'X'
+    
 
 # Computer plays first and always puts X in the middle
 board = [[1, 2,   3],
@@ -231,3 +237,5 @@ if __name__ == "__main__":
     free_fields = make_list_of_free_fields(board)
     print(len(free_fields))
     print(free_fields)
+    draw_move(board)
+    display_board(board)
