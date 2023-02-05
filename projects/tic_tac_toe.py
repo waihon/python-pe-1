@@ -228,4 +228,6 @@ if __name__ == "__main__":
     display_board(board)
     enter_move(board)
     display_board(board)
-    print(make_list_of_free_fields(board))
+    free_fields = make_list_of_free_fields(board)
+    print(len(free_fields))
+    print(free_fields)
