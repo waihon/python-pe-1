@@ -18,3 +18,12 @@ if __name__ == "__main__":
     print("Original:", my_list)
     bubble_sort(my_list, reverse=True)
     print("Decreasing order:", my_list)
+
+    my_list = []
+    num = int(input("How many elements do you want to sort: "))
+    for i in range(num):
+        val = float(input("Enter a list element: "))
+        my_list.append(val)
+    bubble_sort(my_list)
+    print("\nSorted:")
+    print(my_list)
